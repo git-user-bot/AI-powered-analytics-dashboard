@@ -15,7 +15,7 @@ A professional-grade data analytics platform that combines **Pandas** for data p
 ##  Tech Stack
 
 * **Frontend:** [Streamlit](https://streamlit.io/)
-* **AI Engine:** [Google Generative AI (Gemini Pro)]
+* **AI Engine:** [Google Generative AI (Gemini)]
 * **Data Science:** Pandas, NumPy
 * **Visualization:** Plotly, Matplotlib
 * **Environment:** Python 3.12
