@@ -1,6 +1,3 @@
-# AI-powered-analytics-dashboard
-
-
 # AI-Powered Analytics Dashboard
 
 A professional-grade data analytics platform that combines **Pandas** for data processing and **Google Gemini Pro** for automated business intelligence. This tool allows users to upload raw sales data and receive instant, AI-driven insights and interactive visualizations.
