@@ -41,31 +41,23 @@ if uploaded_file:
         st.subheader("AI Insights")
         st.write(insights)
 
-        # ... (previous code for uploading, cleaning, and showing KPIs/Charts)
-
-    # --- STEP 10: NATURAL LANGUAGE QUERYING ---
-    st.divider() # Visual separator
-    st.subheader("💬 Chat with your Data")
+    st.divider() 
+    st.subheader("Chat with your Data")
 
     user_question = st.text_input("Ask a specific question about your data (e.g., 'Which month is best?')")
 
     if user_question:
-        # We pass the KPIs and the specific question to the AI
-        # This uses the same logic as your insight generator
         with st.spinner("Thinking..."):
-            # You can reuse your ai_agent logic or create a new function
             answer = generate_ai_insights(kpis, f"User Question: {user_question}")
             st.write(f"**AI Answer:** {answer}")
 
 
-    # --- STEP 11: DOWNLOADABLE REPORT ---
-    st.divider()
-    st.subheader("📥 Export Analysis")
 
-    # Check if insights have been generated yet
+    st.divider()
+    st.subheader("Export Analysis")
+
+    
     if 'insights' in locals():
-        # 1. Save to local folder (Optional - for your server records)
-        # Ensure the 'reports' folder exists first!
         import os
         if not os.path.exists("reports"):
             os.makedirs("reports")
@@ -73,7 +65,6 @@ if uploaded_file:
         with open("reports/report.txt", "w") as f:
             f.write(insights)
 
-        # 2. Provide the Download Button for the User
         st.download_button(
             label="Download AI Analysis Report",
             data=insights,
